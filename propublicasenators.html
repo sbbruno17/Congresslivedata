@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SENATORS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="congres113home.html"><img id='tgiflogo' alt=tgiflogo src="tgif%20logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="congres113home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Congress 113
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="propublicahouse.html">House</a>
+                        <a class="dropdown-item" href="propublicarecentvotes.html">Senate</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Loyalty
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="loyalty-senate.html">House</a>
+                        <a class="dropdown-item" href="loyalty-senate.html">Senate</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Attendance
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="attendance-house.html">House</a>
+                        <a class="dropdown-item" href="attendance-senate.html">Senate</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a id="mail" href="mailto:info@tgif.net">info@tgif.net</a>
+            </form>
+        </div>
+    </nav>
+    <div class='container' id='app'>
+        <div class='row'>
+            <div class='col-md-9'>
+                <header>
+                    <h2>Senators</h2>
+                    <p>First convened in 1789, the composition and powers of the Senate are established in Article One
+                        of the U.S. Constitution. Each state is represented by two senators, regardless of population,
+                        who serve staggered six-year terms. The Senate has several exclusive powers not granted to the
+                        House, including consenting to treaties as a precondition to their ratification and consenting
+                        to or confirming appointments of Cabinet secretaries, federal judges, other federal executive
+                        officials, military officers, regulatory officials, ambassadors, and other federal uniformed
+                        officers, as well as trial of federal officials impeached by the House.</p>
+                </header>
+            </div>
+        </div>
+        <div class='col-md-8 row justify-content-between'>
+            <b>Filter by Party:</b>
+            <label for='Republican'>Republican</label>
+            <input onchange="tableFilter()" type='checkbox' checked name='party' id='Republican' value='R'>
+            <label for='Democrat'>Democrat</label>
+            <input onchange="tableFilter()" type='checkbox' checked name='party' id='Democrat' value='D'>
+            <label for='Independent'>Independent</label>
+            <input onchange="tableFilter()" type='checkbox' checked name='party' id='Independent' value='ID'>
+            <div class='col-md-4 aling-self-end'><b>Filter By State</b>
+                <select onchange='tableFilter' id='filteredStateComplete'>
+                    <option value='all'>All</option>
+                </select>
+            </div>
+        </div>
+
+        <table class='table table-bordered table-dark'>
+            <thead>
+                <th>Name</th>
+                <th>Party</th>
+                <th>State</th>
+                <th>Years in Office</th>
+                <th> % votes w/party</th>
+            </thead>
+            <tbody id='senate-data'></tbody>
+        </table>
+
+        <footer>
+            <div class="alert alert-dark" role="alert">©TGIF 2016| All Rights Reserverd</div>
+        </footer>
+    </div>
+    <!-- <script src='pro-congress-113-senate.js'> </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="house-tables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+    background-color: darkgray;
+}
+
+#tgiflogo {
+    width: 180px;
+    height: 100px;
+}
+
+#capitol {
+    width: 200px;
+    height: 200px;
+
+}
+
+footer {
+    text-align: center
+}
+
+td,
+tr {
+    text-align: center;
+}
